@@ -1,15 +1,12 @@
 local M = {}
 
-M.setup = function(opts)
-    opts = opts or {}
+M.setup = function()
     vim.api.nvim_create_user_command('Just', function(input)
         M.run(input.fargs)
     end, {
         nargs = '*',
-        complete = function() -- has optional varargs
-            return M.recipes()
-        end,
-        desc = 'Just',
+        complete = M.recipes,
+        desc = 'Run the justfile in the current dir',
     })
 end
 
