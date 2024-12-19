@@ -1,5 +1,5 @@
 # just.nvim
-A wrapper for [just](https://github.com/casey/just) for slightly better integration into neovim
+A [just](https://github.com/casey/just) wrapper for slightly better integration into neovim
 
 ## Installation
 ### lazy
